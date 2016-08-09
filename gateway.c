@@ -946,7 +946,7 @@ void DIO0_Interrupt(int Channel)
 			{
 				LogMessage("Uplink Command message %d bytes = %s", Bytes, Message+1);
 			}
-			else if (Message[1] == 0x66)
+			else if (Message[1] == 0x66 || Message[1] == 0x68)
 			{
 				ProcessSSDVMessage(Channel, Message);
 			}
